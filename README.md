@@ -1,0 +1,2 @@
+# memorycache
+Threadsafe memory cache
