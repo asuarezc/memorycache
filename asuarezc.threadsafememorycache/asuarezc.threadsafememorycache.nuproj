@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80AB3C95-D127-4770-94CC-322957C4734A}</ProjectGuid>
+    <Description>asuarezc.threadsafememorycache</Description>
+    <PackageId>asuarezc.threadsafememorycache</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>asuarezc</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>asuarezc.threadsafememorycache</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>asuarezc.threadsafememorycache</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>asuarezc</Owners>
+    <Title>Threadsafe memory cache</Title>
+    <Summary>Simple generic and threadsafe memory cache</Summary>
+    <PackageProjectUrl>https://github.com/asuarezc/memorycache/</PackageProjectUrl>
+    <PackageIconUrl>https://imgur.com/a/IZpNdvp</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/asuarezc/memorycache/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="readme.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+    <None Include="CacheManager.cs" />
+    <None Include="CacheItemGeneric.cs" />
+    <None Include="CacheConfiguration.cs" />
+    <None Include="ICacheGeneric.cs" />
+    <None Include="ICache.cs" />
+    <None Include="Cache.cs" />
+    <None Include="CacheOperation.cs" />
+    <None Include="CacheOperationException.cs" />
+    <None Include="ICacheManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.5-dev.8</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>

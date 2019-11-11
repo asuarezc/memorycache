@@ -1,0 +1,1 @@
+﻿Thanks for downloading this nuget package. See https://github.com/asuarezc/memorycache for more information.
